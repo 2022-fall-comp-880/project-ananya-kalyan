@@ -1,8 +1,12 @@
+### Project Proposal
 
+## US Startup Companies over time
 
-**Author**: Ananya Bojja
+**Author-1**: Ananya Bojja
 
-**Date**: 11/16/2022
+**Author-2**: Kalyan Kumar Gade
+
+**Date**: 11/30/2022
 
 
 ## Motivation 
