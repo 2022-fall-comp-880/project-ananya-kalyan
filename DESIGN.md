@@ -15,9 +15,9 @@
 
 - Iterate through the dictionary social_accounts using for loop by assigning the key with no_of_social_accounts and value with company_list.
 
-- Using If condition check whether the company_list is in no_social_accounts.
+- Using If condition check whether the company_list is in accumulator no_social_accounts.
 
-- If the condition is satisfied then append the no_social_accounts to the list of company_list.
+- If the condition is satisfied then append the accumulator no_social_accounts to the list of company_list.
 
 - Otherwise, Assign the value no_social_accounts to the company_list index in no_social_accounts.
 
@@ -37,7 +37,7 @@
 
 - Using If condition check whether the team_size is greater than or equal to the value 500. 
 
-- If the condition is true then append the first index of team_size to the list of locations index of company_location.
+- If the condition is true then update the first index of dictionary with location.
 
 - Otherwise, Assign the value first index of team_size to the locations index in company_location.
 
@@ -45,6 +45,23 @@
 
 -------------------------------------------------------------------------------------------------------------------------
 
+**3** How many companies are founded in a specific year?
 
+- The inputs for this question will be the companies founded year and year  from the dataset. 
 
+- Using the year we will find no of companies founded in a specific year by using the data information from the .csv file. 
+
+- An accumulator called companies_founded_year_d is used to get the list of no of companies found in a specific year. At first the accumulator is initialized with an empty dictionary. 
+
+- Iterate through the dictionary using for loop with the iterable no_companies.
+
+- Using If condition check whether the no_companies are in accumulator companies_founded_year_d. 
+
+- If the condition is true then the count of no_companies is increased to the accumulator .
+
+- Otherwise, Assign the accumulator companies_founded_year_d with the value 1.
+
+- This is a histogram of attributes with founded, count of company_names from the data. 
+
+- The outcome for this question will be a dictionary of  year founded and no of startup companies emerged.
 
