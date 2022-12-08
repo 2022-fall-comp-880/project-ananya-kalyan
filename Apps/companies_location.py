@@ -71,10 +71,10 @@ class CompanyLocation:
                                      company_name_idx, team_size_idx)
         return location_with_comp_size_dict
 
-    def company_loc_by_team_size(self):
+    def company_loc_by_team_size(self) -> dict:
         """
-        Gets dictionary of date released and voting average by calling
-            self.location_by_company_team_size().
+        Gets dictionary of location and list of companies for a specific location by calling
+        self.location_by_company_team_size().
         Creates and returns a new dictionary whose keys are location
             and value is a list of companies for a specific location.
         :returns: dictionary
