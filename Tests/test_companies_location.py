@@ -10,7 +10,7 @@ class TestCompaniesLocation(unittest.TestCase):
     """Test `companies_list_same_social_accounts()` method."""
 
     def setUp(self):
-        """Create objects for the three testing cases."""
+        """Create  objects for the three testing cases."""
         data_dir = os.path.dirname(__file__) + "/../data"
         self.startups_stats = CompanyLocation(f'{data_dir}/Startup_data.csv')
         self.startups_stats_empty = CompanyLocation(
