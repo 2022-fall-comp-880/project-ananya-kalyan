@@ -12,7 +12,6 @@ class TestSocialMediaAccounts(unittest.TestCase):
 
     def setUp(self) -> None:
         """Create objects for the three testing cases."""
-
         data_dir = os.path.dirname(__file__) + "/../data"
         self.Startup_data = SocialMediaAccounts(f'{data_dir}/Startup_data.csv')
         self.Startup_data_empty = SocialMediaAccounts(
