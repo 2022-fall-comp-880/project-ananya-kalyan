@@ -52,7 +52,7 @@ class SocialMediaAccounts:
                     startups_dict[key] = value
         return startups_dict
 
-    def firm_social_media_accounts(self) -> dict:
+    def firm_social_media_accounts(self) -> dict[str, int]:
         """
         Create a dictionary of company social media accounts.
 
@@ -71,7 +71,7 @@ class SocialMediaAccounts:
             no_company_socials_idx)
         return no_of_social_accounts_dict
 
-    def companies_list_same_social_accounts(self):
+    def companies_list_same_social_accounts(self) -> dict[str, int]:
         """
         Create a dictionary of same social media with company list.
 

@@ -55,6 +55,12 @@
 
 - Iterate through the dictionary using for loop with the iterable no_companies.
 
+- If the no_companies is equal to "-1".
+       
+- If the "unknown" is in the accumulator then increment the unknown index of dictionary by the value 1.
+
+-  Else assign the unknown index of accumulator dictionary with the value 1.
+
 - Using If condition check whether the no_companies are in accumulator companies_founded_year_d. 
 
 - If the condition is true then the count of no_companies is increased to the accumulator .

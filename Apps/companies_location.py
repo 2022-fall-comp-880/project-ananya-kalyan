@@ -78,7 +78,7 @@ class CompanyLocation:
                                      company_name_idx, team_size_idx)
         return location_with_comp_size_dict
 
-    def company_loc_by_team_size(self) -> dict:
+    def company_loc_by_team_size(self) -> dict[str, str]:
         """
         Create a dictionary of location of company list by team size.
 
