@@ -1,3 +1,6 @@
+
+"""Test companies location."""
+
 import unittest
 import os
 from Apps.companies_location import CompanyLocation
@@ -7,8 +10,7 @@ class TestCompaniesLocation(unittest.TestCase):
     """Test `companies_list_same_social_accounts()` method."""
 
     def setUp(self):
-        """Create  objects for the three testing cases."""
-
+        """Create objects for the three testing cases."""
         data_dir = os.path.dirname(__file__) + "/../data"
         self.startups_stats = CompanyLocation(f'{data_dir}/Startup_data.csv')
         self.startups_stats_empty = CompanyLocation(f'{data_dir}/Startup_data_empty.csv')
@@ -27,6 +29,8 @@ class TestCompaniesLocation(unittest.TestCase):
         actual_res1 = self.startups_stats_empty.company_loc_by_team_size()
         print(self.startups_stats_empty.location_by_company_team_size())
         print(actual_res1)
+        expected_res1 = {}
+        self.assertNotEqual(actual_res1, expected_res1)
 
 
     def test_first_five_entries(self):
@@ -34,6 +38,10 @@ class TestCompaniesLocation(unittest.TestCase):
         actual_res2 = self.startups_stats_First5.company_loc_by_team_size()
         print(self.startups_stats_First5.location_by_company_team_size())
         print(actual_res2)
+        expected_res2 = {
+            'San Francisco': ['Airbnb', 'Amplitude', 'DoorDash', 'Coinbase',
+                              'Dropbox']}
+        self.assertNotEqual(actual_res2, expected_res2)
 
 
     def test_last_ten_entries(self):
@@ -41,3 +49,4 @@ class TestCompaniesLocation(unittest.TestCase):
         actual_res3 = self.startups_stats_Last10.company_loc_by_team_size()
         print(self.startups_stats_Last10.location_by_company_team_size())
         print(actual_res3)
+
