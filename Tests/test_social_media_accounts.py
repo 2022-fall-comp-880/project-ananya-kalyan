@@ -1,4 +1,5 @@
-""" Test Social media accounts. """
+"""Test Social media accounts."""
+
 
 import unittest
 import os
@@ -10,7 +11,7 @@ class TestSocialMediaAccounts(unittest.TestCase):
     """Test `companies_list_same_social_accounts()` method."""
 
     def setUp(self) -> None:
-        """Create  objects for the three testing cases."""
+        """Create objects for the three testing cases."""
 
         data_dir = os.path.dirname(__file__) + "/../data"
         self.Startup_data = SocialMediaAccounts(f'{data_dir}/Startup_data.csv')
@@ -44,5 +45,3 @@ class TestSocialMediaAccounts(unittest.TestCase):
         actual_res3 = self.Startup_data_Last10.companies_list_same_social_accounts()
         print(self.Startup_data_Last10.firm_social_media_accounts())
         print(actual_res3)
-
-
