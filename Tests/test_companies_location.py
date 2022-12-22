@@ -20,7 +20,6 @@ class TestCompaniesLocation(unittest.TestCase):
         self.startups_stats_Last10 = CompanyLocation(
             f'{data_dir}/Startup_data_Last10.csv')
 
-
     def test_multiple_entries(self):
         """Test case 1 using Startup_data.csv."""
         actual_res = self.startups_stats.company_loc_by_team_size()
@@ -45,10 +44,8 @@ class TestCompaniesLocation(unittest.TestCase):
                               'Dropbox']}
         self.assertNotEqual(actual_res2, expected_res2)
 
-
     def test_last_ten_entries(self):
         """Test case 4 using Startup_data_Last10."""
         actual_res3 = self.startups_stats_Last10.company_loc_by_team_size()
         print(self.startups_stats_Last10.location_by_company_team_size())
         print(actual_res3)
-
