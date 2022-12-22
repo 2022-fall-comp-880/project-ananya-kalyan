@@ -1,9 +1,8 @@
-"""Test Social media accounts."""
 
+"""Test Social media accounts."""
 
 import unittest
 import os
-
 from Apps.social_media_accounts import SocialMediaAccounts
 
 
@@ -29,18 +28,21 @@ class TestSocialMediaAccounts(unittest.TestCase):
 
     def test_empty(self):
         """Test case 2 using Startup_data_empty.csv."""
-        actual_res1 = self.Startup_data_empty.companies_list_same_social_accounts()
+        actual_res1 = self.Startup_data_empty.\
+            companies_list_same_social_accounts()
         print(self.Startup_data_empty.firm_social_media_accounts())
         print(actual_res1)
 
     def test_first_five_entries(self):
         """Test case 3 using Startup_data_First5.csv."""
-        actual_res2 = self.Startup_data_First5.companies_list_same_social_accounts()
+        actual_res2 = self.Startup_data_First5.\
+            companies_list_same_social_accounts()
         print(self.Startup_data_First5.firm_social_media_accounts())
         print(actual_res2)
 
     def test_one_entries(self):
         """Test case 4 using Startup_data_Last10."""
-        actual_res3 = self.Startup_data_Last10.companies_list_same_social_accounts()
+        actual_res3 = self.Startup_data_Last10.\
+            companies_list_same_social_accounts()
         print(self.Startup_data_Last10.firm_social_media_accounts())
         print(actual_res3)
