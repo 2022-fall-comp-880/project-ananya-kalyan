@@ -10,10 +10,10 @@ import csv
 
 class SocialMediaAccounts:
     """
-        Represent a data-set of US_startup Companies over time information.
+    Represent a data-set of US_startup Companies over time information.
 
-        Attributes:
-        filename: string
+    Attributes:
+    filename: string
     """
 
     def __init__(self, filename):
