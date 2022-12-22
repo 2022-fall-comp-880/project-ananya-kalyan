@@ -1,5 +1,6 @@
 """
-company_founded_year_count.py
+Represents a data_set of US_startup Companies over time information.
+
 Authors:
   - Ananya Bojja
   - Kalyan Kumar Gade
@@ -11,54 +12,84 @@ import csv
 
 class CompanyFoundedYear:
     """
-    Data processing functionality
+    Represents a data_set of Us_startup Companies over time information.
+
     Attributes:
         filename: string
     """
+
     def __init__(self, filename):
         """
-        Instance variable initialization
+        Instance variable initialization.
+
         :param filename: string
         """
         self.filename = filename
 
-    def read_data_file_to_d(self, key_idx, value_idx):
+    def read_data_file_to_d(self, value: int) -> list:
         """
-        Reads from text file named self.filename using csv.reader() method
+        Read data from a text file into a dict.
+
+        Reads from text file named `self.filename` using `csv.reader()` method
         and creates a dictionary with the data in column key_file as keys and
         data in column value_file as values.
-        :param key_idx: non-negative integer, position of column in the
-            text file, with the first column at position 0
-        :param value_idx: non-negative integer, position of column in the
-            text file, with the first column at position 0
-        :return: dictionary
-            key: integer, representing data points in column key_idx
-            value: string of corresponding values in column value_idx
-        """
 
+        :param value: non-negative integer.
 
-    def company_social_accounts(self):
+        :return: list
+            value: list of integers, list of founded year of the companies.
         """
+        year_list = []
+        with open(self.filename, encoding='utf-8', newline='') as csv_file:
+            reader = csv.reader(csv_file, delimiter=',')
+            for count, row in enumerate(reader):
+                if count != 0:
+                    key = row[value]
+                    year_list.append(key)
+        return year_list
+
+    def company_founded_year(self):
+        """
+        Create a dictionary of company founded year with count.
+
         Creates and returns a dictionary whose keys are founded year of
-        and values are no of companies founded in the year corresponding to that year.
+        and values are no of companies founded in the year corresponding to
+        that year.
+
         :return: dictionary
             key: integer, represents the year founded
-            value: integer, represents the no of companies founded in that year.
+            value: integer, represents the no of companies founded in
+            that year.
         """
-
+        founded_year = 4
+        comp_founded_year_dict = self.read_data_file_to_d(founded_year)
+        return comp_founded_year_dict
 
     def no_of_companies_founded(self):
         """
-        Gets dictionary of year founded and voting average by calling
-            self.company_social_accounts().
+        Create a dictionary of year founded and no of companies founded.
+
+        Gets dictionary of year founded and no of companies founded
+         by calling self.company_social_accounts().
+
         Creates and returns a new dictionary whose keys are the year founded
-            and value is total no of companies founded in specific year
+            and value is total no of companies founded in specific year.
+
         :returns: dictionary
            key: int, founded_year
            value: int, no of companies founded in specific year
         """
-
-
-
-
-
+        companies_founded_year_d = {}
+        year = self.company_founded_year()
+        for no_companies in year:
+            if no_companies == "-1":
+                if "unknown" in companies_founded_year_d:
+                    companies_founded_year_d["unknown"] += 1
+                else:
+                    companies_founded_year_d["unknown"] = 1
+            else:
+                if no_companies in companies_founded_year_d:
+                    companies_founded_year_d[no_companies] += 1
+                else:
+                    companies_founded_year_d[no_companies] = 1
+        return companies_founded_year_d
