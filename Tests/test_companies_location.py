@@ -1,3 +1,6 @@
+
+"""Test companies location."""
+
 import unittest
 import os
 from Apps.companies_location import CompanyLocation
@@ -28,12 +31,18 @@ class TestCompaniesLocation(unittest.TestCase):
         actual_res1 = self.startups_stats_empty.company_loc_by_team_size()
         print(self.startups_stats_empty.location_by_company_team_size())
         print(actual_res1)
+        expected_res1 = {}
+        self.assertNotEqual(actual_res1, expected_res1)
 
     def test_first_five_entries(self):
         """Test case 3 using Startup_data_First5.csv."""
         actual_res2 = self.startups_stats_First5.company_loc_by_team_size()
         print(self.startups_stats_First5.location_by_company_team_size())
         print(actual_res2)
+        expected_res2 = {
+            'San Francisco': ['Airbnb', 'Amplitude', 'DoorDash', 'Coinbase',
+                              'Dropbox']}
+        self.assertNotEqual(actual_res2, expected_res2)
 
     def test_last_ten_entries(self):
         """Test case 4 using Startup_data_Last10."""

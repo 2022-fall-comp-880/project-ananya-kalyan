@@ -1,5 +1,6 @@
 """
-social_media_accounts.py
+Represents a data_set of US_startup Companies over time information.
+
 Author: Ananya Bojja
 Last updated: 12/7/2022
 """
@@ -9,10 +10,10 @@ import csv
 
 class SocialMediaAccounts:
     """
-        Represent a data-set of US_startup Companies over time information.
+    Represent a data-set of US_startup Companies over time information.
 
-        Attributes:
-        filename: string
+    Attributes:
+    filename: string
     """
 
     def __init__(self, filename):
@@ -53,9 +54,12 @@ class SocialMediaAccounts:
 
     def firm_social_media_accounts(self) -> dict:
         """
+        Create a dictionary of company social media accounts.
+
         Creates and returns a dictionary whose keys are name of companies and
         values are no of social media accounts corresponding to that specific
         firm.
+
         :return: dictionary
             key: str, represents the company name
             value: integer, represents the no of social media accounts
@@ -69,12 +73,15 @@ class SocialMediaAccounts:
 
     def companies_list_same_social_accounts(self):
         """
+        Create a dictionary of same social media with company list.
+
         Gets dictionary of company names and their social media accounts count
          by calling self.firm_social_media_accounts.
 
         Creates and returns a new dictionary whose keys are no_social_accounts
             and value is a list of company names corresponding to the no of
             social media accounts.
+
         :returns: dictionary
            key: integer, no of social media accounts associated with the
            company.

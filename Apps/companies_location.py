@@ -1,5 +1,6 @@
 """
-companies_location.py
+Represents a data_set of US_startup Companies over time information.
+
 Author: Kalyan Kumar Gade
 Last updated: 12/7/2021
 """
@@ -26,6 +27,8 @@ class CompanyLocation:
     def read_data_file_to_d(self, key_idx: int, value_idx: int,
                             idx: int) -> dict:
         """
+        Read data from a text file into a dict.
+
         Reads from text file named `self.filename` using `csv.reader()` method
         and creates a dictionary with the data in column key_file as keys and
         data in column value_file as values.
@@ -36,6 +39,7 @@ class CompanyLocation:
             text file, with the first column at position 0
         :param idx: non-negative integer, position of column in the
             text file, with the first column at position 0
+
         :return: dictionary
             key: string, representing data points in column key_idx
             value: string of corresponding values in column value_idx
@@ -56,8 +60,11 @@ class CompanyLocation:
 
     def location_by_company_team_size(self) -> dict:
         """
-        Creates and returns a dictionary whose keys are location
-         and values are list of company name and team_size.
+        Create a dictionary of location with company team size.
+
+        Creates and returns a dictionary whose keys are location and
+        values are list of company name and team_size.
+
         :return: dictionary
             key: str, represents location of the company
             value: list of str, integer, represents lists of company name and
@@ -71,12 +78,16 @@ class CompanyLocation:
                                      company_name_idx, team_size_idx)
         return location_with_comp_size_dict
 
-    def company_loc_by_team_size(self):
+    def company_loc_by_team_size(self) -> dict:
         """
-        Gets dictionary of date released and voting average by calling
-            self.location_by_company_team_size().
+        Create a dictionary of location of company list by team size.
+
+        Gets dictionary of location and list of companies for a specific
+         location by calling self.location_by_company_team_size().
+
         Creates and returns a new dictionary whose keys are location
-            and value is a list of companies for a specific location.
+        and value is a list of companies for a specific location.
+
         :returns: dictionary
            key: string, location.
            value: list of strings, a list of companies which are present in
