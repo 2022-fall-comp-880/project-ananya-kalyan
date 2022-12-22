@@ -65,7 +65,7 @@ class CompanyFoundedYear:
         comp_founded_year_dict = self.read_data_file_to_d(founded_year)
         return comp_founded_year_dict
 
-    def no_of_companies_founded(self):
+    def no_of_companies_founded(self) -> dict[int, int]:
         """
         Create a dictionary of year founded and no of companies founded.
 
