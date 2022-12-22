@@ -7,7 +7,6 @@ from Apps.companies_location import CompanyLocation
 
 
 class TestCompaniesLocation(unittest.TestCase):
-
     """Test `company_loc_by_team_size()` method."""
 
     def setUp(self):
